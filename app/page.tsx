@@ -373,9 +373,38 @@ export default function Home() {
     resume: (
       <div className="resume-view">
         <div className="resume-controls">
-          <span>Résumé preview</span>
-          <MacButton onClick={() => window.print()}><Printer size={15} /> Print / Save as PDF</MacButton>
-        </div>
+  <span>Résumé preview</span>
+
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "flex-end",
+      gap: 8,
+    }}
+  >
+    <a
+      className="mac-button"
+      href="/Aayush_Keshari_Resume.pdf"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <ExternalLink size={15} /> View PDF
+    </a>
+
+    <a
+      className="mac-button"
+      href="/Aayush_Keshari_Resume.pdf"
+      download="Aayush_Keshari_Resume.pdf"
+    >
+      <FileText size={15} /> Download PDF
+    </a>
+
+    <MacButton onClick={() => window.print()}>
+      <Printer size={15} /> Print preview
+    </MacButton>
+  </div>
+</div>
         <div className="resume-paper">
           <header><h2>Aayush Keshari</h2><p>Software Engineer · Cincinnati, OH</p></header>
           <section><h3>Education</h3><p><strong>University of Cincinnati</strong> — B.S. Computer Science, April 2027 · GPA: 3.7</p></section>
