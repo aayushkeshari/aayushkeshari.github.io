@@ -1,6 +1,6 @@
-# Aayush Keshari — Classic Mac Portfolio
+# Aayush Keshari's Portfolio
 
-An interactive portfolio inspired by the late-1990s Classic Mac OS desktop. The site includes movable Finder-style windows for Aayush's background, experience, projects, skills, résumé, and contact links.
+An interactive portfolio inspired by the late-1990s Classic Mac OS desktop. The site includes movable Finder-style windows for my background, experience, projects, skills, résumé, and contact links.
 
 ## Features
 
