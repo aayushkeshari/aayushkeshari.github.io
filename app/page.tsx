@@ -78,6 +78,7 @@ const projects = [
     stack: "Java · Python · Sockets · Networking",
     description:
       "A cross-language client–server system with a structured application protocol, message validation, connection lifecycle management, and failure handling.",
+    href: "https://github.com/aayushkeshari/client-server-networking-system",
   },
 ];
 
