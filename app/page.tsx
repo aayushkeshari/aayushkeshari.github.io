@@ -61,11 +61,11 @@ const projects = [
     href: "https://github.com/aayushkeshari/AquaCoach",
   },
   {
-    name: "Project Stream",
-    stack: "Python · Streamlit · SEC filings · NLP",
-    description:
-      "An equity-research workspace that compares company filings, surfaces material language changes, and turns retrieval signals into focused analyst questions.",
-    href: "https://github.com/aayushkeshari/project-stream",
+  name: "Equity Research Agent",
+  stack: "Python · Streamlit · OpenAI API · SEC filings",
+  description:
+    "An AI-powered equity-research agent that analyzes SEC filings, identifies material language changes, and generates focused questions for analyst review.",
+  href: "https://github.com/aayushkeshari/equity-research-agent",
   },
   {
     name: "AR Knick-Knack",
