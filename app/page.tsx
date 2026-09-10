@@ -275,23 +275,8 @@ export default function Home() {
       <div className="welcome-panel">
         <div className="welcome-kicker">WELCOME TO MY HOMEPAGE</div>
         <div className="welcome-identity">
-<<<<<<< Updated upstream
-        <div className="ak-mark">
-            <img
-              src="/Aayush_Keshari_Profile.jpg"
-              alt="Aayush Keshari"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center 30%",
-                borderRadius: "inherit",
-              }}
-            />
-=======
           <div className="ak-mark">
             <img src={profileHref} alt="Aayush Keshari" />
->>>>>>> Stashed changes
           </div>
           <div>
             <h1>Aayush Keshari</h1>
@@ -395,46 +380,6 @@ export default function Home() {
     resume: (
       <div className="resume-view">
         <div className="resume-controls">
-<<<<<<< Updated upstream
-  <span>Résumé preview</span>
-
-  <div
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "flex-end",
-      gap: 8,
-    }}
-  >
-    <a
-      className="mac-button"
-      href="/Aayush_Keshari_Resume.pdf"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <ExternalLink size={15} /> View PDF
-    </a>
-
-    <a
-      className="mac-button"
-      href="/Aayush_Keshari_Resume.pdf"
-      download="Aayush_Keshari_Resume.pdf"
-    >
-      <FileText size={15} /> Download PDF
-    </a>
-
-    <MacButton onClick={() => window.print()}>
-      <Printer size={15} /> Print preview
-    </MacButton>
-  </div>
-</div>
-        <div className="resume-paper">
-          <header><h2>Aayush Keshari</h2><p>Software Engineer · Cincinnati, OH</p></header>
-          <section><h3>Education</h3><p><strong>University of Cincinnati</strong> — B.S. Computer Science, April 2027 · GPA: 3.7</p></section>
-          <section><h3>Experience</h3>{experiences.slice(0, 3).map((item) => <p key={item.company}><strong>{item.company}</strong> · {item.role}<br /><span>{item.details}</span></p>)}</section>
-          <section><h3>Selected Projects</h3><p><strong>AquaCoach</strong> — Native SwiftUI hydration coach with HealthKit integration.</p><p><strong>Project Stream</strong> — SEC filing analysis and research-lead workspace.</p></section>
-          <section><h3>Technical Skills</h3><p>Python, SQL, Java, Swift, C++, C#, JavaScript · PyTorch, SwiftUI, Snowflake, Azure, Git</p></section>
-=======
           <span>Résumé preview</span>
           <div className="resume-actions">
             <a className="mac-button" href={resumeHref} target="_blank" rel="noreferrer"><ExternalLink size={15} /> View PDF</a>
@@ -451,7 +396,6 @@ export default function Home() {
           <p className="resume-fallback">
             If the preview does not appear, <a href={resumeHref} target="_blank" rel="noreferrer">open the résumé PDF</a>.
           </p>
->>>>>>> Stashed changes
         </div>
       </div>
     ),
