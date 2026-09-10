@@ -270,7 +270,19 @@ export default function Home() {
       <div className="welcome-panel">
         <div className="welcome-kicker">WELCOME TO MY HOMEPAGE</div>
         <div className="welcome-identity">
-          <div className="ak-mark" aria-hidden="true">AK</div>
+        <div className="ak-mark">
+            <img
+              src="/Aayush_Keshari_Profile.jpg"
+              alt="Aayush Keshari"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center 30%",
+                borderRadius: "inherit",
+              }}
+            />
+          </div>
           <div>
             <h1>Aayush Keshari</h1>
             <p className="welcome-role">Software Engineer · Data & iOS Systems</p>
