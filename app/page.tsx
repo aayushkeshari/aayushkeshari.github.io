@@ -6,6 +6,7 @@ import {
   CircleHelp,
   Code2,
   Command,
+  Download,
   ExternalLink,
   FileText,
   FolderOpen,
@@ -81,6 +82,10 @@ const projects = [
     href: "https://github.com/aayushkeshari/client-server-networking-system",
   },
 ];
+
+const resumeHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Aayush_Keshari_Resume.pdf`;
+const resumePreviewHref = `${resumeHref}#view=FitH&toolbar=0&navpanes=0`;
+const profileHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Aayush_Keshari_Profile.jpg`;
 
 const experiences = [
   {
@@ -270,6 +275,7 @@ export default function Home() {
       <div className="welcome-panel">
         <div className="welcome-kicker">WELCOME TO MY HOMEPAGE</div>
         <div className="welcome-identity">
+<<<<<<< Updated upstream
         <div className="ak-mark">
             <img
               src="/Aayush_Keshari_Profile.jpg"
@@ -282,6 +288,10 @@ export default function Home() {
                 borderRadius: "inherit",
               }}
             />
+=======
+          <div className="ak-mark">
+            <img src={profileHref} alt="Aayush Keshari" />
+>>>>>>> Stashed changes
           </div>
           <div>
             <h1>Aayush Keshari</h1>
@@ -385,6 +395,7 @@ export default function Home() {
     resume: (
       <div className="resume-view">
         <div className="resume-controls">
+<<<<<<< Updated upstream
   <span>Résumé preview</span>
 
   <div
@@ -423,6 +434,24 @@ export default function Home() {
           <section><h3>Experience</h3>{experiences.slice(0, 3).map((item) => <p key={item.company}><strong>{item.company}</strong> · {item.role}<br /><span>{item.details}</span></p>)}</section>
           <section><h3>Selected Projects</h3><p><strong>AquaCoach</strong> — Native SwiftUI hydration coach with HealthKit integration.</p><p><strong>Project Stream</strong> — SEC filing analysis and research-lead workspace.</p></section>
           <section><h3>Technical Skills</h3><p>Python, SQL, Java, Swift, C++, C#, JavaScript · PyTorch, SwiftUI, Snowflake, Azure, Git</p></section>
+=======
+          <span>Résumé preview</span>
+          <div className="resume-actions">
+            <a className="mac-button" href={resumeHref} target="_blank" rel="noreferrer"><ExternalLink size={15} /> View PDF</a>
+            <a className="mac-button" href={resumeHref} download="Aayush_Keshari_Resume.pdf"><Download size={15} /> Download PDF</a>
+            <MacButton onClick={() => window.print()}><Printer size={15} /> Print preview</MacButton>
+          </div>
+        </div>
+        <div className="resume-document">
+          <iframe
+            className="resume-pdf"
+            src={resumePreviewHref}
+            title="Aayush Keshari résumé PDF preview"
+          />
+          <p className="resume-fallback">
+            If the preview does not appear, <a href={resumeHref} target="_blank" rel="noreferrer">open the résumé PDF</a>.
+          </p>
+>>>>>>> Stashed changes
         </div>
       </div>
     ),

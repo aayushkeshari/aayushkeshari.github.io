@@ -119,7 +119,8 @@ a { color: #080879; }
 .welcome-panel { padding: 22px 24px 18px; text-align: center; background: #f3f3f3; }
 .welcome-kicker { margin-bottom: 14px; font-size: 13px; font-weight: 800; letter-spacing: .08em; color: #006c7b; }
 .welcome-identity { display: flex; align-items: center; justify-content: center; gap: 22px; text-align: left; }
-.ak-mark { display: grid; place-items: center; flex: 0 0 auto; width: 114px; height: 92px; border: 2px solid #151515; border-radius: 48% 52% 45% 55%; background: radial-gradient(circle at 28% 25%, #d8ffff 0 7%, #2bd4dc 8% 34%, #087e96 60%, #024a59 100%); color: white; font: 700 33px Georgia, serif; text-shadow: 1px 2px #004454; box-shadow: inset 4px 4px 0 rgba(255,255,255,.45), inset -5px -5px 0 rgba(0,0,0,.2), 3px 3px 0 #777; }
+.ak-mark { display: grid; place-items: center; flex: 0 0 auto; width: 114px; height: 92px; padding: 5px; overflow: hidden; border: 2px solid #151515; border-radius: 48% 52% 45% 55%; background: radial-gradient(circle at 28% 25%, #d8ffff 0 7%, #2bd4dc 8% 34%, #087e96 60%, #024a59 100%); box-shadow: inset 4px 4px 0 rgba(255,255,255,.45), inset -5px -5px 0 rgba(0,0,0,.2), 3px 3px 0 #777; }
+.ak-mark img { width: 100%; height: 100%; border: 2px solid rgba(255,255,255,.72); border-radius: inherit; object-fit: cover; object-position: center 30%; }
 .welcome-panel h1 { margin: 0; font: 700 clamp(30px, 4vw, 44px) Georgia, "Times New Roman", serif; letter-spacing: -.02em; }
 .welcome-role { margin: 7px 0 2px; color: #00697a; font-weight: 800; }
 .welcome-location { margin: 0; color: #444; font-size: 13px; }
@@ -177,13 +178,11 @@ a { color: #080879; }
 
 .resume-view { padding: 12px; background: #c7c7c7; }
 .resume-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; font-size: 12px; }
-.resume-paper { max-width: 610px; margin: 0 auto; padding: 28px 34px; border: 1px solid #676767; background: white; box-shadow: 3px 3px #858585; font-family: "Times New Roman", serif; }
-.resume-paper header { text-align: center; border-bottom: 2px solid #111; }
-.resume-paper header h2 { margin: 0; font-size: 27px; }
-.resume-paper header p { margin: 4px 0 9px; }
-.resume-paper section h3 { margin: 17px 0 7px; border-bottom: 1px solid #555; font-size: 16px; text-transform: uppercase; letter-spacing: .08em; }
-.resume-paper section p { margin: 8px 0; line-height: 1.35; }
-.resume-paper section span { font-size: 13px; }
+.resume-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.resume-document { max-width: 760px; margin: 0 auto; border: 1px solid #676767; background: white; box-shadow: 3px 3px #858585; }
+.resume-pdf { display: block; width: 100%; height: min(78vh, 860px); min-height: 560px; border: 0; background: white; }
+.resume-fallback { margin: 0; padding: 8px 12px; border-top: 1px solid #8a8a8a; background: #eee; font-size: 12px; }
+.resume-fallback a { color: #004e9a; text-decoration: underline; }
 
 .contact-layout { display: grid; grid-template-columns: 95px 1fr; gap: 20px; padding: 28px; background: #f4f4f4; }
 .contact-stamp { width: 84px; height: 68px; display: grid; place-items: center; border: 2px solid #172d4a; background: linear-gradient(145deg, white 0 55%, #78afd6 56%); box-shadow: 3px 3px #999; color: #173456; }
@@ -249,9 +248,11 @@ a { color: #080879; }
   .mac-window { top: 127px !important; max-height: calc(100dvh - 170px); }
   .window-content { max-height: calc(100dvh - 205px); }
   .welcome-identity { text-align: center; }
-  .ak-mark { display: none; }
+  .ak-mark { display: grid; width: 66px; height: 60px; padding: 3px; }
   .welcome-actions .mac-button { flex: 1 1 42%; font-size: 12px; }
-  .resume-paper { padding: 20px; }
+  .resume-pdf { height: 68vh; min-height: 430px; }
+  .resume-controls { align-items: flex-start; flex-direction: column; }
+  .resume-actions { justify-content: flex-start; }
 }
 @media (prefers-reduced-motion: reduce) { .mac-window { animation: none; } }
 @media print {
@@ -261,5 +262,7 @@ a { color: #080879; }
   .mac-window[aria-label*="Résumé"] { position: static; display: block; width: 100% !important; border: 0; box-shadow: none; }
   .window-content { max-height: none; overflow: visible; }
   .resume-view { padding: 0; background: white; }
-  .resume-paper { max-width: none; padding: 0; border: 0; box-shadow: none; }
+  .resume-document { max-width: none; border: 0; box-shadow: none; }
+  .resume-pdf { width: 100%; height: 100vh; min-height: 900px; }
+  .resume-fallback { display: none; }
 }
