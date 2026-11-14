@@ -54,6 +54,13 @@ const initialWindows: Record<WindowId, WindowState> = {
 
 const projects = [
   {
+    name: "Catalyst, reimagined",
+    stack: "UI/UX · Figma · Svelte 5 · JavaScript",
+    description:
+      "A student-portal redesign connecting class discovery, section comparison, enrollment review, and academic progress. Explore the research, design decisions, eleven feedback responses, screenshots, and working public prototype.",
+    href: "https://aayushkeshari.github.io/catalyst-reimagined/#/case-study",
+  },
+  {
     name: "AquaCoach",
     stack: "Swift · SwiftUI · HealthKit · Combine",
     description:
@@ -354,10 +361,11 @@ export default function Home() {
               <div>
                 <div className="item-heading">
                   <h3>{project.name}</h3>
-                  {project.href ? <a href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} on GitHub`}><ExternalLink size={16} /></a> : null}
+                  {project.href ? <a href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.name}${project.href.includes("#/case-study") ? " case study" : " on GitHub"}`}><ExternalLink size={16} /></a> : null}
                 </div>
                 <p className="project-stack">{project.stack}</p>
                 <p>{project.description}</p>
+                {project.href.includes("#/case-study") ? <p><a href={project.href} target="_blank" rel="noreferrer">Read the UI/UX case study →</a></p> : null}
               </div>
             </article>
           ))}
